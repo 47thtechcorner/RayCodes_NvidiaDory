@@ -1,8 +1,8 @@
 <div align="center">
-  <a href="https://youtu.be/PLACEHOLDER">
-    <img src="https://img.youtube.com/vi/PLACEHOLDER/0.jpg" alt="This 4B Model Beats Gemma 3 27B Offline - NVIDIA Dory 1.0">
+  <a href="https://youtu.be/7QJz4u0cjsE">
+    <img src="https://img.youtube.com/vi/7QJz4u0cjsE/0.jpg" alt="NVIDIA Dory 1.0: This 4B AI Beats 27B Models Without Adding GPU!">
   </a>
-  <h3>📺 <a href="https://youtu.be/PLACEHOLDER">Watch the full tutorial on YouTube</a></h3>
+  <h3>📺 <a href="https://youtu.be/7QJz4u0cjsE">Watch the full tutorial on YouTube</a></h3>
 </div>
 
 # NVIDIA Nemotron-Labs Dory 1.0 (4B)

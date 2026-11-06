@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Task 3: Local Multi-Agent Swarm Blueprint</title>
+  <style>
+    body { background: #090b10; color: #f8fafc; font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif; padding: 32px; line-height: 1.5; }
+    .container { max-width: 1080px; margin: 0 auto; }
+    .header { border-bottom: 1px solid rgba(255,255,255,0.1); padding-bottom: 20px; margin-bottom: 24px; }
+    .badge { background: rgba(168, 85, 247, 0.15); color: #c084fc; border: 1px solid #a855f7; padding: 4px 10px; border-radius: 6px; font-size: 0.8rem; font-weight: 700; }
+    .stats-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; margin-bottom: 24px; }
+    .card { background: #161b28; border: 1px solid rgba(255,255,255,0.08); border-radius: 12px; padding: 18px; margin-bottom: 20px; }
+    .card-title { font-size: 0.75rem; text-transform: uppercase; color: #94a3b8; margin-bottom: 6px; }
+    .card-val { font-size: 1.25rem; font-weight: 700; color: #c084fc; font-family: monospace; }
+    .agent-box { background: rgba(255,255,255,0.02); border: 1px solid rgba(255,255,255,0.06); border-radius: 10px; padding: 16px; margin-top: 12px; }
+    .agent-header { display: flex; justify-content: space-between; align-items: center; margin-bottom: 8px; }
+    .agent-name { font-weight: 700; font-size: 1rem; color: #38bdf8; }
+    .agent-pill { font-size: 0.75rem; font-family: monospace; padding: 2px 8px; border-radius: 4px; background: rgba(56, 189, 248, 0.15); color: #38bdf8; }
+    pre { white-space: pre-wrap; font-family: "JetBrains Mono", monospace; font-size: 0.88rem; color: #cbd5e1; }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="header">
+      <span class="badge">Task 3: Dynamic Dual-Agent Swarm</span>
+      <h1 style="font-size: 1.8rem; margin-top: 10px;">Local Multi-Agent Dynamic Swarm Blueprint</h1>
+      <p style="color: #94a3b8;">Local swarm orchestration with Coordinator Agent (Loop=1) and Deep Auditor Agent (Loop=4).</p>
+    </div>
+
+    <div class="stats-grid">
+      <div class="card">
+        <div class="card-title">Target Input File</div>
+        <div class="card-val">task3_system_migration_brief.txt</div>
+      </div>
+      <div class="card">
+        <div class="card-title">Combined Memory Footprint</div>
+        <div class="card-val">&lt; 3.0 GB Total RAM</div>
+      </div>
+      <div class="card">
+        <div class="card-title">Hardware Environment</div>
+        <div class="card-val">16GB RAM Local Laptop</div>
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="agent-box">
+        <div class="agent-header">
+          <span class="agent-name">🤖 Agent 1: Fast Architecture Coordinator</span>
+          <span class="agent-pill">Compute: Loop=1 (Rapid Triage)</span>
+        </div>
+        <pre>{{coordinator_output}}</pre>
+      </div>
+
+      <div class="agent-box" style="margin-top: 20px;">
+        <div class="agent-header">
+          <span class="agent-name">🛡️ Agent 2: Deep Security & Compliance Auditor</span>
+          <span class="agent-pill">Compute: Loop=4 (96-Layer Latent Depth)</span>
+        </div>
+        <pre>{{auditor_output}}</pre>
+      </div>
+    </div>
+  </div>
+</body>
+</html>
+

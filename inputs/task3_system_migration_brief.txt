@@ -1,0 +1,29 @@
+# ARCHITECTURE DESIGN BRIEF (RFC-2026-048)
+Title: Migration to Local Looped AI Cluster (NVIDIA Dory 1.0)
+Author: Marcus Vance (Principal Platform Architect)
+Date: March 2026 | Status: Pending Architecture Review
+Target Environment: Hybrid On-Premise + AWS GovCloud
+
+1. EXECUTIVE SUMMARY & PROBLEM STATEMENT
+Our engineering team currently spends over $18,000/month on external proprietary LLM APIs for automated code reviews and incident triage. In addition to high costs, sending internal proprietary source code and sensitive health data (HIPAA) to third-party endpoints violates our new zero-trust compliance requirements.
+
+2. PROPOSED LOCAL SOLUTION
+We are proposing to deploy a dedicated offline inference pool powered by NVIDIA Nemotron-Labs Dory 1.0 (4B Q4_K_M). Because Dory uses a looped architecture, we can run multiple instances concurrently in under 16GB of system memory.
+
+3. TWO-AGENT WORKFLOW ORCHESTRATION
+We will divide responsibilities between two specialized local agents:
+- Agent 1: Fast Architecture Coordinator (Running in Quick Loop=1 Mode)
+  - Purpose: Rapid triage of incoming engineering pull requests and architecture tickets.
+  - Deliverable: High-level migration roadmap with numbered milestone phases.
+  - Expected Latency: Sub-second response time (~84 words/second).
+
+- Agent 2: Deep Security & Compliance Auditor (Running in Deep Loop=4 Mode)
+  - Purpose: Deep latent verification of Agent 1's plan against SOC2 Type II, HIPAA, and mTLS standards.
+  - Deliverable: Pass/Fail compliance assessment with mandatory network and key rotation controls.
+  - Expected Latency: Thorough reasoning pass (~22 words/second).
+
+4. HARDWARE & COMPLIANCE CONSTRAINTS
+- Memory Envelope: Total combined VRAM for both agents must remain under 3.0 GB.
+- Network Boundary: 100% offline air-gapped execution with zero telemetry egress.
+- Storage: All model weights and cached contexts must use AES-256 at-rest encryption.
+
